@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="bCiNeApp.pelicula.detail.title">Pelicula</span> {{vm.pelicula.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bCiNeApp.pelicula.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.pelicula.nombre}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.pelicula.pais">Pais</span></dt>
+        <dd>
+            <span>{{vm.pelicula.pais}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.pelicula.duracion">Duracion</span></dt>
+        <dd>
+            <span>{{vm.pelicula.duracion}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.pelicula.fechaDeEstreno">Fecha De Estreno</span></dt>
+        <dd>
+            <span>{{vm.pelicula.fechaDeEstreno | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.pelicula.genero">Genero</span></dt>
+        <dd>
+            <span>{{vm.pelicula.genero}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.pelicula.esEstreno">Es Estreno</span></dt>
+        <dd>
+            <span>{{vm.pelicula.esEstreno}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.pelicula.sinopsis">Sinopsis</span></dt>
+        <dd>
+            <span>{{vm.pelicula.sinopsis}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pelicula-detail.edit({id:vm.pelicula.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

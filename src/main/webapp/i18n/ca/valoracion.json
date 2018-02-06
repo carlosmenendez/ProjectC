@@ -1,0 +1,25 @@
+{
+    "bCiNeApp": {
+        "valoracion" : {
+            "home": {
+                "title": "Valoracions",
+                "createLabel": "Create a new Valoracion",
+                "createOrEditLabel": "Create or edit a Valoracion"
+            },
+            "created": "A new Valoracion is created with identifier {{ param }}",
+            "updated": "A Valoracion is updated with identifier {{ param }}",
+            "deleted": "A Valoracion is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Valoracion {{ id }}?"
+            },
+            "detail": {
+                "title": "Valoracion"
+            },
+            "nota": "Nota",
+            "usuarioVotado": "Usuario Votado",
+            "peliculaVotada": "Pelicula Votada",
+            "userVote": "User Vote",
+            "userVoteMovie": "User Vote Movie"
+        }
+    }
+}

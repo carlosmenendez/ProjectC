@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "cineDeLaSala",
+            "otherEntityName": "cine",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "denominacion",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "aforo",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "cine",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180118105916",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "salas",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

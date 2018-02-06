@@ -1,0 +1,66 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCarteleraLabel" data-translate="bCiNeApp.cartelera.home.createOrEditLabel">Create or edit a Cartelera</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.cartelera.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.cartelera.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.cartelera.dia" for="field_dia">Dia</label>
+                <div class="input-group">
+                    <input id="field_dia" type="text" class="form-control" name="dia" datetime-picker="{{dateformat}}" ng-model="vm.cartelera.dia" is-open="vm.datePickerOpenStatus.dia"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dia')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.cartelera.cine" for="field_cine">Cine</label>
+            <input type="number" class="form-control" name="cine" id="field_cine"
+                    ng-model="vm.cartelera.cine"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.cartelera.pelicula" for="field_pelicula">Pelicula</label>
+            <input type="number" class="form-control" name="pelicula" id="field_pelicula"
+                    ng-model="vm.cartelera.pelicula"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.cartelera.sala" for="field_sala">Sala</label>
+            <input type="number" class="form-control" name="sala" id="field_sala"
+                    ng-model="vm.cartelera.sala"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="bCiNeApp.cartelera.peliDeCartelera" for="field_peliDeCartelera">Peli De Cartelera</label>
+            <select class="form-control" id="field_peliDeCartelera" name="peliDeCartelera" ng-model="vm.cartelera.peliDeCartelera" ng-options="pelicula as pelicula.nombre for pelicula in vm.peliculas track by pelicula.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="bCiNeApp.cartelera.cineDeCartelera" for="field_cineDeCartelera">Cine De Cartelera</label>
+            <select class="form-control" id="field_cineDeCartelera" name="cineDeCartelera" ng-model="vm.cartelera.cineDeCartelera" ng-options="cine as cine.nombre for cine in vm.cines track by cine.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

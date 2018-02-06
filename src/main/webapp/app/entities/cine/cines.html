@@ -1,0 +1,64 @@
+<div>
+    <h2 data-translate="bCiNeApp.cine.home.title">Cines</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="cine.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="bCiNeApp.cine.home.createLabel">
+                        Create new Cine
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="bCiNeApp.cine.nombre">Nombre</span></th>
+                    <th><span data-translate="bCiNeApp.cine.direccion">Direccion</span></th>
+                    <th><span data-translate="bCiNeApp.cine.ciudad">Ciudad</span></th>
+                    <th><span data-translate="bCiNeApp.cine.telefono">Telefono</span></th>
+                    <th><span data-translate="bCiNeApp.cine.numDeSalas">Num De Salas</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cine in vm.cines track by cine.id">
+                    <td><a ui-sref="cine-detail({id:cine.id})">{{cine.id}}</a></td>
+                    <td>{{cine.nombre}}</td>
+                    <td>{{cine.direccion}}</td>
+                    <td>{{cine.ciudad}}</td>
+                    <td>{{cine.telefono}}</td>
+                    <td>{{cine.numDeSalas}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="cine-detail({id:cine.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cine.edit({id:cine.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cine.delete({id:cine.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

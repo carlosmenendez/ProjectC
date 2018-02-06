@@ -1,0 +1,27 @@
+{
+    "bCiNeApp": {
+        "pelicula" : {
+            "home": {
+                "title": "Peliculas",
+                "createLabel": "Crear nuevo Pelicula",
+                "createOrEditLabel": "Crear o editar Pelicula"
+            },
+            "created": "Un nuevo Pelicula ha sido creado con el identificador {{ param }}",
+            "updated": "Un Pelicula ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Pelicula ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Pelicula {{ id }}?"
+            },
+            "detail": {
+                "title": "Pelicula"
+            },
+            "nombre": "Nombre",
+            "pais": "Pais",
+            "duracion": "Duracion",
+            "fechaDeEstreno": "Fecha De Estreno",
+            "genero": "Genero",
+            "esEstreno": "Es Estreno",
+            "sinopsis": "Sinopsis"
+        }
+    }
+}

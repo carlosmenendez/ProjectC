@@ -1,0 +1,41 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "peliDeCartelera",
+            "otherEntityName": "pelicula",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipName": "cineDeCartelera",
+            "otherEntityName": "cine",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "dia",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "cine",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pelicula",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sala",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180118105844",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "cartelera",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

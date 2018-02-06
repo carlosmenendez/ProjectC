@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "userVote",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "valoracion"
+        },
+        {
+            "relationshipName": "userVoteMovie",
+            "otherEntityName": "pelicula",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nota",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "usuarioVotado",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "peliculaVotada",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180125120513",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "valoracion",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

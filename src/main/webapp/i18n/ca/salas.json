@@ -1,0 +1,24 @@
+{
+    "bCiNeApp": {
+        "salas" : {
+            "home": {
+                "title": "Salas",
+                "createLabel": "Create a new Salas",
+                "createOrEditLabel": "Create or edit a Salas"
+            },
+            "created": "A new Salas is created with identifier {{ param }}",
+            "updated": "A Salas is updated with identifier {{ param }}",
+            "deleted": "A Salas is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Salas {{ id }}?"
+            },
+            "detail": {
+                "title": "Salas"
+            },
+            "denominacion": "Denominacion",
+            "aforo": "Aforo",
+            "cine": "Cine",
+            "cineDeLaSala": "Cine De La Sala"
+        }
+    }
+}

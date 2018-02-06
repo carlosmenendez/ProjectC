@@ -1,0 +1,27 @@
+{
+    "bCiNeApp": {
+        "reparto" : {
+            "home": {
+                "title": "Repartos",
+                "createLabel": "Create a new Reparto",
+                "createOrEditLabel": "Create or edit a Reparto"
+            },
+            "created": "A new Reparto is created with identifier {{ param }}",
+            "updated": "A Reparto is updated with identifier {{ param }}",
+            "deleted": "A Reparto is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Reparto {{ id }}?"
+            },
+            "detail": {
+                "title": "Reparto"
+            },
+            "nombreArtista": "Nombre Artista",
+            "rol": "Rol",
+            "descripcion": "Descripcion",
+            "pelicula": "Pelicula",
+            "artistaEnReparto": "Artista En Reparto",
+            "peliculaDelReparto": "Pelicula Del Reparto",
+            "rolDelArtista": "Rol Del Artista"
+        }
+    }
+}

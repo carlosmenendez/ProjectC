@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pais",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "duracion",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fechaDeEstreno",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "genero",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "esEstreno",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "sinopsis",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180114182431",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "pelicula",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

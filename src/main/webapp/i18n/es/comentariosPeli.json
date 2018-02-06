@@ -1,0 +1,25 @@
+{
+    "bCiNeApp": {
+        "comentariosPeli" : {
+            "home": {
+                "title": "Comentarios Pelis",
+                "createLabel": "Crear nuevo Comentarios Peli",
+                "createOrEditLabel": "Crear o editar Comentarios Peli"
+            },
+            "created": "Un nuevo Comentarios Peli ha sido creado con el identificador {{ param }}",
+            "updated": "Un Comentarios Peli ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Comentarios Peli ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Comentarios Peli {{ id }}?"
+            },
+            "detail": {
+                "title": "Comentarios Peli"
+            },
+            "comentario": "Comentario",
+            "usuario": "Usuario",
+            "peli": "Peli",
+            "peliculaQueComenta": "Pelicula Que Comenta",
+            "usuarioQueComenta": "Usuario Que Comenta"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity ComentariosCine.
+    -->
+    <changeSet id="20180125121209-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="cine_que_comenta_id"
+                                 baseTableName="comentarios_cine"
+                                 constraintName="fk_comentarios_cine_cine_que_comenta_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cine"/>
+
+        <addForeignKeyConstraint baseColumnNames="usuario_que_comenta_id"
+                                 baseTableName="comentarios_cine"
+                                 constraintName="fk_comentarios_cine_usuario_que_comenta_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+
+    </changeSet>
+</databaseChangeLog>

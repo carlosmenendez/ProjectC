@@ -1,0 +1,23 @@
+{
+    "bCiNeApp": {
+        "artista" : {
+            "home": {
+                "title": "Artistas",
+                "createLabel": "Create a new Artista",
+                "createOrEditLabel": "Create or edit a Artista"
+            },
+            "created": "A new Artista is created with identifier {{ param }}",
+            "updated": "A Artista is updated with identifier {{ param }}",
+            "deleted": "A Artista is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Artista {{ id }}?"
+            },
+            "detail": {
+                "title": "Artista"
+            },
+            "nombreCompleto": "Nombre Completo",
+            "fechaNacimiento": "Fecha Nacimiento",
+            "esDirector": "Es Director"
+        }
+    }
+}

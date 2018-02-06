@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "cineQueComenta",
+            "otherEntityName": "cine",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipName": "usuarioQueComenta",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "comentariosCine"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "comentario",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "usuario",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "cine",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180125121209",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "comentarios_cine",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

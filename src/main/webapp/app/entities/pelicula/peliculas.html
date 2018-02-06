@@ -1,0 +1,68 @@
+<div>
+    <h2 data-translate="bCiNeApp.pelicula.home.title">Peliculas</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="pelicula.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="bCiNeApp.pelicula.home.createLabel">
+                        Create new Pelicula
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="bCiNeApp.pelicula.nombre">Nombre</span></th>
+                    <th><span data-translate="bCiNeApp.pelicula.pais">Pais</span></th>
+                    <th><span data-translate="bCiNeApp.pelicula.duracion">Duracion</span></th>
+                    <th><span data-translate="bCiNeApp.pelicula.fechaDeEstreno">Fecha De Estreno</span></th>
+                    <th><span data-translate="bCiNeApp.pelicula.genero">Genero</span></th>
+                    <th><span data-translate="bCiNeApp.pelicula.esEstreno">Es Estreno</span></th>
+                    <th><span data-translate="bCiNeApp.pelicula.sinopsis">Sinopsis</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pelicula in vm.peliculas track by pelicula.id">
+                    <td><a ui-sref="pelicula-detail({id:pelicula.id})">{{pelicula.id}}</a></td>
+                    <td>{{pelicula.nombre}}</td>
+                    <td>{{pelicula.pais}}</td>
+                    <td>{{pelicula.duracion}}</td>
+                    <td>{{pelicula.fechaDeEstreno | date:'medium'}}</td>
+                    <td>{{pelicula.genero}}</td>
+                    <td>{{pelicula.esEstreno}}</td>
+                    <td>{{pelicula.sinopsis}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="pelicula-detail({id:pelicula.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pelicula.edit({id:pelicula.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pelicula.delete({id:pelicula.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

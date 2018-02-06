@@ -1,0 +1,26 @@
+{
+    "bCiNeApp": {
+        "cartelera" : {
+            "home": {
+                "title": "Carteleras",
+                "createLabel": "Create a new Cartelera",
+                "createOrEditLabel": "Create or edit a Cartelera"
+            },
+            "created": "A new Cartelera is created with identifier {{ param }}",
+            "updated": "A Cartelera is updated with identifier {{ param }}",
+            "deleted": "A Cartelera is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cartelera {{ id }}?"
+            },
+            "detail": {
+                "title": "Cartelera"
+            },
+            "dia": "Dia",
+            "cine": "Cine",
+            "pelicula": "Pelicula",
+            "sala": "Sala",
+            "peliDeCartelera": "Peli De Cartelera",
+            "cineDeCartelera": "Cine De Cartelera"
+        }
+    }
+}

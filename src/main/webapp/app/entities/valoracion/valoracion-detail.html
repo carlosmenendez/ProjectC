@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="bCiNeApp.valoracion.detail.title">Valoracion</span> {{vm.valoracion.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bCiNeApp.valoracion.nota">Nota</span></dt>
+        <dd>
+            <span>{{vm.valoracion.nota}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.valoracion.usuarioVotado">Usuario Votado</span></dt>
+        <dd>
+            <span>{{vm.valoracion.usuarioVotado}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.valoracion.peliculaVotada">Pelicula Votada</span></dt>
+        <dd>
+            <span>{{vm.valoracion.peliculaVotada}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.valoracion.userVote">User Vote</span></dt>
+        <dd>
+            {{vm.valoracion.userVote.login}}
+        </dd>
+        <dt><span data-translate="bCiNeApp.valoracion.userVoteMovie">User Vote Movie</span></dt>
+        <dd>
+            <a ui-sref="pelicula-detail({id:vm.valoracion.userVoteMovie.id})">{{vm.valoracion.userVoteMovie.nombre}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="valoracion-detail.edit({id:vm.valoracion.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "peliculaQueComenta",
+            "otherEntityName": "pelicula",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipName": "usuarioQueComenta",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "comentariosPeli"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "comentario",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "usuario",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "peli",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180125121120",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "comentarios_peli",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

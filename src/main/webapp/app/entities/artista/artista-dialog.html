@@ -1,0 +1,47 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myArtistaLabel" data-translate="bCiNeApp.artista.home.createOrEditLabel">Create or edit a Artista</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.artista.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.artista.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.artista.nombreCompleto" for="field_nombreCompleto">Nombre Completo</label>
+            <input type="text" class="form-control" name="nombreCompleto" id="field_nombreCompleto"
+                    ng-model="vm.artista.nombreCompleto"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.artista.fechaNacimiento" for="field_fechaNacimiento">Fecha Nacimiento</label>
+                <div class="input-group">
+                    <input id="field_fechaNacimiento" type="text" class="form-control" name="fechaNacimiento" datetime-picker="{{dateformat}}" ng-model="vm.artista.fechaNacimiento" is-open="vm.datePickerOpenStatus.fechaNacimiento"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('fechaNacimiento')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.artista.esDirector" for="field_esDirector">Es Director</label>
+                <input type="checkbox" name="esDirector" id="field_esDirector"
+                          ng-model="vm.artista.esDirector"/>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

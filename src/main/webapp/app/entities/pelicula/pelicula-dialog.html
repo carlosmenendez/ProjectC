@@ -1,0 +1,71 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPeliculaLabel" data-translate="bCiNeApp.pelicula.home.createOrEditLabel">Create or edit a Pelicula</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.pelicula.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.pelicula.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.pelicula.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                    ng-model="vm.pelicula.nombre"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.pelicula.pais" for="field_pais">Pais</label>
+            <input type="text" class="form-control" name="pais" id="field_pais"
+                    ng-model="vm.pelicula.pais"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.pelicula.duracion" for="field_duracion">Duracion</label>
+            <input type="number" class="form-control" name="duracion" id="field_duracion"
+                    ng-model="vm.pelicula.duracion"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.pelicula.fechaDeEstreno" for="field_fechaDeEstreno">Fecha De Estreno</label>
+                <div class="input-group">
+                    <input id="field_fechaDeEstreno" type="text" class="form-control" name="fechaDeEstreno" datetime-picker="{{dateformat}}" ng-model="vm.pelicula.fechaDeEstreno" is-open="vm.datePickerOpenStatus.fechaDeEstreno"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('fechaDeEstreno')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.pelicula.genero" for="field_genero">Genero</label>
+            <input type="text" class="form-control" name="genero" id="field_genero"
+                    ng-model="vm.pelicula.genero"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.pelicula.esEstreno" for="field_esEstreno">Es Estreno</label>
+                <input type="checkbox" name="esEstreno" id="field_esEstreno"
+                          ng-model="vm.pelicula.esEstreno"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bCiNeApp.pelicula.sinopsis" for="field_sinopsis">Sinopsis</label>
+            <input type="text" class="form-control" name="sinopsis" id="field_sinopsis"
+                    ng-model="vm.pelicula.sinopsis"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,68 @@
+<div>
+    <h2 data-translate="bCiNeApp.comentariosPeli.home.title">Comentarios Pelis</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="comentarios-peli.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="bCiNeApp.comentariosPeli.home.createLabel">
+                        Create new Comentarios Peli
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="bCiNeApp.comentariosPeli.comentario">Comentario</span></th>
+                    <th><span data-translate="bCiNeApp.comentariosPeli.usuario">Usuario</span></th>
+                    <th><span data-translate="bCiNeApp.comentariosPeli.peli">Peli</span></th>
+                    <th><span data-translate="bCiNeApp.comentariosPeli.peliculaQueComenta">Pelicula Que Comenta</span></th>
+                    <th><span data-translate="bCiNeApp.comentariosPeli.usuarioQueComenta">Usuario Que Comenta</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="comentariosPeli in vm.comentariosPelis track by comentariosPeli.id">
+                    <td><a ui-sref="comentarios-peli-detail({id:comentariosPeli.id})">{{comentariosPeli.id}}</a></td>
+                    <td>{{comentariosPeli.comentario}}</td>
+                    <td>{{comentariosPeli.usuario}}</td>
+                    <td>{{comentariosPeli.peli}}</td>
+                    <td>
+                        <a ui-sref="pelicula-detail({id:comentariosPeli.peliculaQueComenta.id})">{{comentariosPeli.peliculaQueComenta.nombre}}</a>
+                    </td>
+                    <td>
+                        {{comentariosPeli.usuarioQueComenta.login}}
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="comentarios-peli-detail({id:comentariosPeli.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="comentarios-peli.edit({id:comentariosPeli.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="comentarios-peli.delete({id:comentariosPeli.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

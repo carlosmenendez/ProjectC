@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="bCiNeApp.reparto.detail.title">Reparto</span> {{vm.reparto.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bCiNeApp.reparto.nombreArtista">Nombre Artista</span></dt>
+        <dd>
+            <span>{{vm.reparto.nombreArtista}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.reparto.rol">Rol</span></dt>
+        <dd>
+            <span>{{vm.reparto.rol}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.reparto.descripcion">Descripcion</span></dt>
+        <dd>
+            <span>{{vm.reparto.descripcion}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.reparto.pelicula">Pelicula</span></dt>
+        <dd>
+            <span>{{vm.reparto.pelicula}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.reparto.artistaEnReparto">Artista En Reparto</span></dt>
+        <dd>
+            <a ui-sref="artista-detail({id:vm.reparto.artistaEnReparto.id})">{{vm.reparto.artistaEnReparto.nombre_completo}}</a>
+        </dd>
+        <dt><span data-translate="bCiNeApp.reparto.peliculaDelReparto">Pelicula Del Reparto</span></dt>
+        <dd>
+            <a ui-sref="pelicula-detail({id:vm.reparto.peliculaDelReparto.id})">{{vm.reparto.peliculaDelReparto.nombre}}</a>
+        </dd>
+        <dt><span data-translate="bCiNeApp.reparto.rolDelArtista">Rol Del Artista</span></dt>
+        <dd>
+            <a ui-sref="roles-detail({id:vm.reparto.rolDelArtista.id})">{{vm.reparto.rolDelArtista.nombre_rol}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="reparto-detail.edit({id:vm.reparto.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

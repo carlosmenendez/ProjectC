@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "artistaEnReparto",
+            "otherEntityName": "artista",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre_completo"
+        },
+        {
+            "relationshipName": "peliculaDelReparto",
+            "otherEntityName": "pelicula",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipName": "rolDelArtista",
+            "otherEntityName": "roles",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre_rol"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombreArtista",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "rol",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pelicula",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180125120656",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "reparto",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

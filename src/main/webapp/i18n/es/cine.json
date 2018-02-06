@@ -1,0 +1,25 @@
+{
+    "bCiNeApp": {
+        "cine" : {
+            "home": {
+                "title": "Cines",
+                "createLabel": "Crear nuevo Cine",
+                "createOrEditLabel": "Crear o editar Cine"
+            },
+            "created": "Un nuevo Cine ha sido creado con el identificador {{ param }}",
+            "updated": "Un Cine ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Cine ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Cine {{ id }}?"
+            },
+            "detail": {
+                "title": "Cine"
+            },
+            "nombre": "Nombre",
+            "direccion": "Direccion",
+            "ciudad": "Ciudad",
+            "telefono": "Telefono",
+            "numDeSalas": "Num De Salas"
+        }
+    }
+}

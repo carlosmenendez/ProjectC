@@ -1,0 +1,70 @@
+<div>
+    <h2 data-translate="bCiNeApp.cartelera.home.title">Carteleras</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="cartelera.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="bCiNeApp.cartelera.home.createLabel">
+                        Create new Cartelera
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="bCiNeApp.cartelera.dia">Dia</span></th>
+                    <th><span data-translate="bCiNeApp.cartelera.cine">Cine</span></th>
+                    <th><span data-translate="bCiNeApp.cartelera.pelicula">Pelicula</span></th>
+                    <th><span data-translate="bCiNeApp.cartelera.sala">Sala</span></th>
+                    <th><span data-translate="bCiNeApp.cartelera.peliDeCartelera">Peli De Cartelera</span></th>
+                    <th><span data-translate="bCiNeApp.cartelera.cineDeCartelera">Cine De Cartelera</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cartelera in vm.carteleras track by cartelera.id">
+                    <td><a ui-sref="cartelera-detail({id:cartelera.id})">{{cartelera.id}}</a></td>
+                    <td>{{cartelera.dia | date:'medium'}}</td>
+                    <td>{{cartelera.cine}}</td>
+                    <td>{{cartelera.pelicula}}</td>
+                    <td>{{cartelera.sala}}</td>
+                    <td>
+                        <a ui-sref="pelicula-detail({id:cartelera.peliDeCartelera.id})">{{cartelera.peliDeCartelera.nombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="cine-detail({id:cartelera.cineDeCartelera.id})">{{cartelera.cineDeCartelera.nombre}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="cartelera-detail({id:cartelera.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cartelera.edit({id:cartelera.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cartelera.delete({id:cartelera.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<div>
+    <h2 data-translate="bCiNeApp.valoracion.home.title">Valoracions</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="valoracion.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="bCiNeApp.valoracion.home.createLabel">
+                        Create new Valoracion
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="bCiNeApp.valoracion.nota">Nota</span></th>
+                    <th><span data-translate="bCiNeApp.valoracion.usuarioVotado">Usuario Votado</span></th>
+                    <th><span data-translate="bCiNeApp.valoracion.peliculaVotada">Pelicula Votada</span></th>
+                    <th><span data-translate="bCiNeApp.valoracion.userVote">User Vote</span></th>
+                    <th><span data-translate="bCiNeApp.valoracion.userVoteMovie">User Vote Movie</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="valoracion in vm.valoracions track by valoracion.id">
+                    <td><a ui-sref="valoracion-detail({id:valoracion.id})">{{valoracion.id}}</a></td>
+                    <td>{{valoracion.nota}}</td>
+                    <td>{{valoracion.usuarioVotado}}</td>
+                    <td>{{valoracion.peliculaVotada}}</td>
+                    <td>
+                        {{valoracion.userVote.login}}
+                    </td>
+                    <td>
+                        <a ui-sref="pelicula-detail({id:valoracion.userVoteMovie.id})">{{valoracion.userVoteMovie.nombre}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="valoracion-detail({id:valoracion.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="valoracion.edit({id:valoracion.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="valoracion.delete({id:valoracion.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

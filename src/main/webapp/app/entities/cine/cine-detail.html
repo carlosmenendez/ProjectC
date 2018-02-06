@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="bCiNeApp.cine.detail.title">Cine</span> {{vm.cine.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bCiNeApp.cine.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.cine.nombre}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.cine.direccion">Direccion</span></dt>
+        <dd>
+            <span>{{vm.cine.direccion}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.cine.ciudad">Ciudad</span></dt>
+        <dd>
+            <span>{{vm.cine.ciudad}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.cine.telefono">Telefono</span></dt>
+        <dd>
+            <span>{{vm.cine.telefono}}</span>
+        </dd>
+        <dt><span data-translate="bCiNeApp.cine.numDeSalas">Num De Salas</span></dt>
+        <dd>
+            <span>{{vm.cine.numDeSalas}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="cine-detail.edit({id:vm.cine.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

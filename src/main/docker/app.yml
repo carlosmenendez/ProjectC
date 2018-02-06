@@ -1,0 +1,14 @@
+version: '2'
+services:
+    bcine-app:
+        image: bcine
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mysql://bcine-mysql:3306/bcine?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    bcine-mysql:
+        extends:
+            file: mysql.yml
+            service: bcine-mysql

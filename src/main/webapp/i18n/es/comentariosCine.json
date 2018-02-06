@@ -1,0 +1,25 @@
+{
+    "bCiNeApp": {
+        "comentariosCine" : {
+            "home": {
+                "title": "Comentarios Cines",
+                "createLabel": "Crear nuevo Comentarios Cine",
+                "createOrEditLabel": "Crear o editar Comentarios Cine"
+            },
+            "created": "Un nuevo Comentarios Cine ha sido creado con el identificador {{ param }}",
+            "updated": "Un Comentarios Cine ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Comentarios Cine ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Comentarios Cine {{ id }}?"
+            },
+            "detail": {
+                "title": "Comentarios Cine"
+            },
+            "comentario": "Comentario",
+            "usuario": "Usuario",
+            "cine": "Cine",
+            "cineQueComenta": "Cine Que Comenta",
+            "usuarioQueComenta": "Usuario Que Comenta"
+        }
+    }
+}
